@@ -12,140 +12,135 @@
             background-color: #f5f7fa;
             color: #333;
         }
-        
+
         header {
             text-align: center;
             padding: 2rem 0 1rem;
             border-bottom: 1px solid #eaeaea;
         }
-        
+
         .site-title {
             color: #ff6b00;
             margin: 0;
             font-size: 2.5rem;
         }
-        
+
         .site-subtitle {
             color: #666;
             font-weight: normal;
             margin: 0.5rem 0;
+            font-size: 1.1rem;
         }
-        
+
         nav {
             background-color: #f8f9fa;
             padding: 1rem 0;
             text-align: center;
         }
-        
+
         .nav-link {
             display: inline-block;
             padding: 0.5rem 1.5rem;
-            margin: 0 0.5rem;
+            margin: 0.4rem 0.4rem;
             text-decoration: none;
             color: white;
             background-color: #ff6b00;
             border-radius: 50px;
             font-weight: bold;
+            font-size: 1rem;
             transition: background-color 0.3s;
         }
-        
+
         .nav-link.active {
             background-color: #ff6b00;
         }
-        
+
         .nav-link:hover {
             background-color: #e25c00;
         }
-        
+
         main {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
         }
-        
+
         .welcome-section {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.2rem;
         }
-        
+
         .welcome-title {
             color: #ff6b00;
             font-size: 2rem;
         }
-        
+
         .hero-section {
             display: flex;
             align-items: center;
             gap: 2rem;
-            margin: 2rem 0 4rem;
+            margin: 2rem 0 3rem;
             background-color: white;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             padding: 2rem;
         }
-        
+
         .hero-image {
             flex: 1;
-            min-width: 300px;
+            min-width: 230px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        
+
         .hero-image img {
+            max-width: 320px;
+            max-height: 450px;
             width: 100%;
             height: auto;
+            display: block;
+            margin: 0 auto;
             border-radius: 5px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        
+
         .hero-content {
-            flex: 1;
+            flex: 2;
         }
-        
+
         .hero-heading {
             color: #333;
-            font-size: 2.2rem;
+            font-size: 2.1rem;
             margin-bottom: 1rem;
         }
-        
+
         .hero-text {
             line-height: 1.6;
             color: #555;
+            font-size: 1rem;
         }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: #ff6b00;
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 1.5rem;
-            transition: background-color 0.3s;
-        }
-        
-        .cta-button:hover {
-            background-color: #e25c00;
-        }
-        
+
         .video-section {
             text-align: center;
-            margin: 4rem 0;
-            padding: 2rem;
+            margin: 2.5rem 0;
+            padding: 2rem 1rem;
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        
+
         .video-container {
-            max-width: 800px;
-            margin: 2rem auto;
+            width: 100%;
+            max-width: 680px;
+            margin: 2rem auto 0 auto;
             position: relative;
             padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
             overflow: hidden;
         }
-        
+
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -154,63 +149,23 @@
             height: 100%;
             border: none;
         }
-        
+
         .section-title {
             color: #ff6b00;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
-        
-        .birthday-memories {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-        
-        .memory-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-        
-        .memory-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .memory-image img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .memory-content {
-            padding: 1.5rem;
-        }
-        
-        .memory-title {
-            font-size: 1.2rem;
-            margin: 0 0 0.5rem;
-            color: #333;
-        }
-        
-        .memory-text {
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        
+
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
+            padding: 1.5rem 0;
+            margin-top: 2.5rem;
+            font-size: 1rem;
         }
-        
+
         .confetti {
             position: fixed;
             width: 10px;
@@ -219,10 +174,65 @@
             animation: fall linear forwards;
             z-index: 1000;
         }
-        
+
         @keyframes fall {
             to {
                 transform: translateY(100vh);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            main {
+                padding: 1rem;
+            }
+            .hero-section {
+                padding: 1.2rem;
+            }
+        }
+        @media (max-width: 700px) {
+            .hero-section {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1rem 0.5rem;
+            }
+            .hero-image img {
+                max-width: 220px;
+                max-height: 310px;
+            }
+            .hero-heading {
+                font-size: 1.3rem;
+            }
+            .hero-content {
+                text-align: center;
+            }
+        }
+        @media (max-width: 480px) {
+            header {
+                padding: 1.2rem 0 0.7rem;
+            }
+            .site-title {
+                font-size: 1.6rem;
+            }
+            .welcome-title {
+                font-size: 1.3rem;
+            }
+            .hero-image img {
+                max-width: 96vw;
+                max-height: 56vw;
+            }
+            .video-section {
+                padding: 1rem 0.3rem;
+            }
+            .video-container {
+                max-width: 98vw;
+            }
+            .nav-link {
+                font-size: 0.97rem;
+                padding: 0.4rem 1rem;
+            }
+            main {
+                padding: 0.3rem;
             }
         }
     </style>
@@ -245,7 +255,7 @@
         
         <section class="hero-section">
             <div class="hero-image">
-                <img src="birthday-hero.jpg" alt="Eddie on his 18th birthday" style="max-width: 320px; max-height: 450px; width: auto; height: 100%; display: block; margin: 0 auto;">
+                <img src="birthday-hero.jpg" alt="Eddie on his 18th birthday" style="max-width: 320px; max-height: 450px; width: 100%; height: auto; display: block; margin: 0 auto;">
             </div>
             <div class="hero-content">
                 <h2 class="hero-heading">Celebrating Eddie's Journey to Adulthood</h2>
@@ -258,24 +268,23 @@
                     As he steps into adulthood, we celebrate not just the person he is today, but the wonderful 
                     journey that has shaped him and the bright future that awaits.
                 </p>
-                </div>
+            </div>
         </section>
         
         <section class="video-section">
-            <h2 class="section-title">Birthday Highlights</h2>
-            <p>Watch this special video we've created to celebrate Eddie's journey from childhood to adulthood.</p>
+            <h2 class="section-title">Youthful Blessings Record</h2>
+            <p>Messages from Teachers and Friends: Warm Moments</p>
             <div class="video-container">
                 <iframe
-  width="560" height="315"
-  src="https://www.youtube.com/embed/u9p7qbdLTag"
-  title="Eddie's 18th Birthday Celebration"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
-  </div>
+                  width="560" height="315"
+                  src="https://www.youtube.com/embed/u9p7qbdLTag"
+                  title="Eddie's 18th Birthday Celebration"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+            </div>
         </section>
-              
     </main>
     
     <footer>
@@ -287,24 +296,19 @@
         // Simple confetti effect for birthday celebration
         function createConfetti() {
             const colors = ['#ff6b00', '#ffcc00', '#ff00cc', '#00ccff', '#00ff00'];
-            
             for (let i = 0; i < 100; i++) {
                 setTimeout(() => {
                     const confetti = document.createElement('div');
                     confetti.classList.add('confetti');
-                    
                     // Random position, color and size
                     confetti.style.left = Math.random() * 100 + 'vw';
                     confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
                     confetti.style.width = Math.random() * 10 + 5 + 'px';
                     confetti.style.height = Math.random() * 10 + 5 + 'px';
-                    
                     // Random animation duration
                     const duration = Math.random() * 3 + 2;
                     confetti.style.animationDuration = duration + 's';
-                    
                     document.body.appendChild(confetti);
-                    
                     // Remove confetti after animation completes
                     setTimeout(() => {
                         confetti.remove();
@@ -312,8 +316,6 @@
                 }, i * 100);
             }
         }
-        
-        // Run confetti effect when page loads
         window.addEventListener('load', createConfetti);
     </script>
 </body>
